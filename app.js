@@ -1,11 +1,8 @@
-
 document.addEventListener("DOMContentLoaded", () => {
 
-    // دکمه حالت تاریک و روشن
     const themeBtn = document.getElementById("themeBtn");
 
     themeBtn.addEventListener("click", () => {
-
         document.body.classList.toggle("light-mode");
 
         if (document.body.classList.contains("light-mode")) {
@@ -13,32 +10,28 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             themeBtn.textContent = "☀️ حالت روشن";
         }
-
     });
 
-
-    // شمارنده کاربران
     animateCounter("users", 25);
-
-    // شمارنده بازدیدها
     animateCounter("visits", 350);
 
 });
 
 
-// تابع شمارنده
 function animateCounter(id, target) {
 
     const element = document.getElementById(id);
 
-    if (!element) return;
+    if (!element) {
+        alert("عنصر " + id + " پیدا نشد!");
+        return;
+    }
 
     let value = 0;
 
     const timer = setInterval(() => {
 
-        value++;
-
+        value += 1;
         element.textContent = value;
 
         if (value >= target) {
@@ -46,5 +39,4 @@ function animateCounter(id, target) {
         }
 
     }, 20);
-
 }
