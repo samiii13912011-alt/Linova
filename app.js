@@ -1,15 +1,17 @@
 const btn = document.getElementById("themeBtn");
 
-// دکمه حالت روشن/تیره
-btn.onclick = function () {
-    document.body.classList.toggle("light-mode");
+// تغییر حالت روشن/تیره
+if (btn) {
+    btn.addEventListener("click", () => {
+        document.body.classList.toggle("light-mode");
 
-    if (document.body.classList.contains("light-mode")) {
-        btn.textContent = "🌙 حالت تیره";
-    } else {
-        btn.textContent = "☀️ حالت روشن";
-    }
-};
+        if (document.body.classList.contains("light-mode")) {
+            btn.textContent = "🌙 حالت تیره";
+        } else {
+            btn.textContent = "☀️ حالت روشن";
+        }
+    });
+}
 
 // تابع شمارنده
 function animateCounter(id, target) {
