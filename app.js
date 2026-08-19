@@ -15,3 +15,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+function animateCounter(id, target) {
+
+    let value = 0;
+
+    const element = document.getElementById(id);
+
+    const timer = setInterval(() => {
+
+        value++;
+
+        element.textContent = value;
+
+        if (value >= target) {
+            clearInterval(timer);
+        }
+
+    }, 30);
+
+}
+
+animateCounter("users", 25);
+animateCounter("visits", 350);
