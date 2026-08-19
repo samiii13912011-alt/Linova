@@ -1,3 +1,5 @@
+alert("LINOVA JS WORKING 😎🔥");
+
 document.addEventListener("DOMContentLoaded", () => {
 
     // دکمه حالت تاریک و روشن
