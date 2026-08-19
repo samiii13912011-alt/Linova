@@ -142,3 +142,38 @@ header p {
         grid-template-columns: 1fr;
     }
 }
+
+#themeBtn {
+    margin-top: 20px;
+    background: white;
+    color: #2563eb;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+#themeBtn:hover {
+    transform: scale(1.05);
+}
+
+.light-mode {
+    background: #f3f4f6;
+    color: #111827;
+}
+
+.light-mode .sidebar {
+    background: white;
+}
+
+.light-mode .card {
+    background: white;
+    color: #111827;
+}
+
+.light-mode header {
+    background: linear-gradient(135deg,#60a5fa,#3b82f6);
+}
