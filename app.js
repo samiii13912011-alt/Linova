@@ -1,3 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("🚀 Linova Started");
+    setTimeout(() => {
+        alert("😎 به Linova خوش اومدی!");
+    }, 800);
 });
