@@ -1,4 +1,3 @@
-alert("LINOVA JS WORKING 😎🔥");
 
 document.addEventListener("DOMContentLoaded", () => {
 
