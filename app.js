@@ -1,19 +1,27 @@
 const btn = document.getElementById("themeBtn");
 
-// تغییر حالت روشن/تیره
-if (btn) {
-    btn.addEventListener("click", () => {
-        document.body.classList.toggle("light-mode");
-
-        if (document.body.classList.contains("light-mode")) {
-            btn.textContent = "🌙 حالت تیره";
-        } else {
-            btn.textContent = "☀️ حالت روشن";
-        }
-    });
+// بررسی حالت ذخیره‌شده
+if (localStorage.getItem("theme") === "light") {
+    document.body.classList.add("light-mode");
+    btn.textContent = "🌙 حالت تیره";
+} else {
+    btn.textContent = "☀️ حالت روشن";
 }
 
-// تابع شمارنده
+// تغییر حالت
+btn.addEventListener("click", () => {
+    document.body.classList.toggle("light-mode");
+
+    if (document.body.classList.contains("light-mode")) {
+        btn.textContent = "🌙 حالت تیره";
+        localStorage.setItem("theme", "light");
+    } else {
+        btn.textContent = "☀️ حالت روشن";
+        localStorage.setItem("theme", "dark");
+    }
+});
+
+// شمارنده کاربران
 function animateCounter(id, target) {
     const element = document.getElementById(id);
 
@@ -31,6 +39,5 @@ function animateCounter(id, target) {
     }, 20);
 }
 
-// اجرای شمارنده‌ها
 animateCounter("users", 25);
 animateCounter("visits", 350);
