@@ -1,28 +1,72 @@
-<header>
-    <h1>خوش آمدی 👋</h1>
-    <p>به پنل مدیریت لینوا خوش آمدید.</p>
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
 
-    <button id="themeBtn">🌙 حالت روشن</button>
-</header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linova Dashboard</title>
 
-<section class="cards">
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    <div class="card">
-        <span>👥</span>
-        <h3>کاربران</h3>
-        <h2 id="users">0</h2>
-    </div>
+<body>
 
-    <div class="card">
-        <span>📈</span>
-        <h3>بازدیدها</h3>
-        <h2 id="visits">0</h2>
-    </div>
+<div class="dashboard">
 
-    <div class="card">
-        <span>🚀</span>
-        <h3>وضعیت</h3>
-        <strong>فعال</strong>
-    </div>
+    <aside class="sidebar">
 
-</section>
+        <h2>LINOVA</h2>
+
+        <nav>
+            <a href="#" class="active">🏠 داشبورد</a>
+            <a href="#">📊 آمار</a>
+            <a href="#">⚙️ تنظیمات</a>
+        </nav>
+
+    </aside>
+
+    <main class="main-content">
+
+        <header>
+
+            <h1>خوش آمدی 👋</h1>
+
+            <p>به پنل مدیریت لینوا خوش آمدید.</p>
+
+            <button id="themeBtn">
+                🌙 حالت روشن
+            </button>
+
+        </header>
+
+        <section class="cards">
+
+            <div class="card">
+                <span>👥</span>
+                <h3>کاربران</h3>
+                <h2 id="users">0</h2>
+            </div>
+
+            <div class="card">
+                <span>📈</span>
+                <h3>بازدیدها</h3>
+                <h2 id="visits">0</h2>
+            </div>
+
+            <div class="card">
+                <span>🚀</span>
+                <h3>وضعیت</h3>
+                <strong>فعال</strong>
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
