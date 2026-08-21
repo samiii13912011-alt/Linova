@@ -260,8 +260,8 @@ rgba(255,255,255,.5);
     }
 
     .menu-btn{
-        display:block;
-    }
+    z-index:1100;
+}
 
     .sidebar{
         width:250px;
