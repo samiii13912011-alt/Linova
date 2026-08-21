@@ -143,21 +143,6 @@ header p{
 
 /* Mobile */
 
-@media(max-width:768px){
-
-.dashboard{
-flex-direction:column;
-}
-
-.sidebar{
-width:100%;
-}
-
-.main-content{
-padding:20px;
-}
-
-}
 
 /* Profile Card */
 
