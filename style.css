@@ -239,78 +239,93 @@ rgba(255,255,255,.5);
 
 .bar:hover{
 
-/* Hamburger Menu */
+/* ===== Mobile Menu ===== */
 
 .menu-btn{
     display:none;
-    background:#2563eb;
-    color:white;
-    border:none;
-    padding:12px 16px;
-    border-radius:10px;
-    font-size:22px;
-    cursor:pointer;
-    margin-bottom:20px;
 }
-
-@media(max-width:768px){
-
-    .dashboard{
-        flex-direction:column;
-    }
-
-    .menu-btn{
-    z-index:1100;
-}
-
-    .sidebar{
-        width:250px;
-        position:fixed;
-        top:0;
-        right:-250px;
-        height:100vh;
-        transition:right .3s;
-        z-index:1000;
-    }
-
-    .sidebar.show{
-        right:0;
-    }
-
-    .main-content{
-        width:100%;
-        padding:20px;
-    }
-}
-    transform:scaleY(1.08);
-}
-
-.bar span{
-    position:absolute;
-    bottom:-28px;
-    width:100%;
-    text-align:center;
-    font-size:14px;
-}
-
-.light-mode .chart-section{
-    background:white;
-}
-
-/* Overlay */
 
 .overlay{
+    display:none;
+}
+
+@media (max-width:768px){
+
+.menu-btn{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
     position:fixed;
+    top:18px;
+    right:18px;
+
+    width:48px;
+    height:48px;
+
+    border:none;
+    border-radius:12px;
+
+    background:#2563eb;
+    color:#fff;
+
+    font-size:26px;
+
+    cursor:pointer;
+
+    z-index:2001;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.3);
+}
+
+.sidebar{
+
+    position:fixed;
+
+    top:0;
+
+    right:-270px;
+
+    width:250px;
+
+    height:100vh;
+
+    transition:right .35s ease;
+
+    z-index:2000;
+}
+
+.sidebar.show{
+
+    right:0;
+
+}
+
+.overlay{
+
+    display:block;
+
+    position:fixed;
+
     inset:0;
+
     background:rgba(0,0,0,.45);
+
     opacity:0;
+
     visibility:hidden;
+
     transition:.3s;
-    z-index:900;
+
+    z-index:1999;
 }
 
 .overlay.show{
+
     opacity:1;
+
     visibility:visible;
+
 }
 
+}
