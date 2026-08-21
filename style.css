@@ -306,7 +306,7 @@ rgba(255,255,255,.5);
     opacity:0;
     visibility:hidden;
     transition:.3s;
-    z-index:999;
+    z-index:900;
 }
 
 .overlay.show{
