@@ -41,3 +41,10 @@ function animateCounter(id, target) {
 
 animateCounter("users", 25);
 animateCounter("visits", 350);
+
+const menuBtn = document.getElementById("menuBtn");
+const sidebar = document.querySelector(".sidebar");
+
+menuBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("show");
+});
