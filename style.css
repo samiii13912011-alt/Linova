@@ -208,3 +208,49 @@ padding:20px;
 .light-mode .profile-card{
     background:white;
 }
+
+/* Chart */
+
+.chart-section{
+    margin-top:35px;
+    background:#111827;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+}
+
+.chart-section h2{
+    margin-bottom:25px;
+}
+
+.chart{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    height:260px;
+    gap:12px;
+}
+
+.bar{
+    flex:1;
+    background:linear-gradient(180deg,#3b82f6,#2563eb);
+    border-radius:12px 12px 0 0;
+    position:relative;
+    transition:.4s;
+}
+
+.bar:hover{
+    transform:scaleY(1.08);
+}
+
+.bar span{
+    position:absolute;
+    bottom:-28px;
+    width:100%;
+    text-align:center;
+    font-size:14px;
+}
+
+.light-mode .chart-section{
+    background:white;
+}
