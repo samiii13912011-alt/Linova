@@ -42,9 +42,19 @@ function animateCounter(id, target) {
 animateCounter("users", 25);
 animateCounter("visits", 350);
 
+
 const menuBtn = document.getElementById("menuBtn");
 const sidebar = document.querySelector(".sidebar");
+const overlay = document.getElementById("overlay");
 
+// باز و بسته کردن منو
 menuBtn.addEventListener("click", () => {
     sidebar.classList.toggle("show");
+    overlay.classList.toggle("show");
+});
+
+// بستن منو با لمس پس‌زمینه
+overlay.addEventListener("click", () => {
+    sidebar.classList.remove("show");
+    overlay.classList.remove("show");
 });
