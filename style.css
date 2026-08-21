@@ -225,20 +225,6 @@ header p{
 }
 
 .bar:hover{
-    transform:scaleY(1.08);
-}
-
-.bar span{
-    position:absolute;
-    bottom:-28px;
-    width:100%;
-    text-align:center;
-    font-size:14px;
-}
-
-.light-mode .chart-section{
-    background:white;
-}
 
 /* Hamburger Menu */
 
@@ -256,21 +242,46 @@ header p{
 
 @media(max-width:768px){
 
-.menu-btn{
-display:block;
+    .dashboard{
+        flex-direction:column;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .sidebar{
+        width:250px;
+        position:fixed;
+        top:0;
+        right:-250px;
+        height:100vh;
+        transition:right .3s;
+        z-index:1000;
+    }
+
+    .sidebar.show{
+        right:0;
+    }
+
+    .main-content{
+        width:100%;
+        padding:20px;
+    }
+}
+    transform:scaleY(1.08);
 }
 
-.sidebar{
-position:fixed;
-top:0;
-right:-260px;
-height:100%;
-z-index:1000;
-transition:.3s;
+.bar span{
+    position:absolute;
+    bottom:-28px;
+    width:100%;
+    text-align:center;
+    font-size:14px;
 }
 
-.sidebar.show{
-right:0;
+.light-mode .chart-section{
+    background:white;
 }
 
-}
+
